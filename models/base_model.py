@@ -1,16 +1,26 @@
 #!/usr/bin/python3
+"""
+Base Class Module 
+"""
 import uuid
 from datetime import datetime
 import models
 
 class BaseModel:
-    """Base Class Model that defines
-    all common atributes/ methods"""
-    def __init__ (self):
-        self.id = str(uuid.uuid4())
-        self.created_at = datetime.now()
-        self.updated_at = self.created_at
-        models.storage.new(self)
+    """
+    Base Class Model that defines
+    all common atributes/ methods
+    """
+    def __init__ (self, *args, **kwargs):
+        if kwargs:
+            for key, value in kwargs.items():
+                if key != '__class__':
+                    self.__dict__[key] = value
+        else:
+            self.id = str(uuid.uuid4())
+            self.created_at = datetime.now()
+            self.updated_at = self.created_at
+            models.storage.new(self)
 
     def __str__(self):
         """
