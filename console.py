@@ -7,25 +7,20 @@ import cmd
 
 
 class HBNBCommand(cmd.Cmd):
-
-    """This is my HNBB Class"""
-
+    """Simple command processor example."""
     prompt = '(hbnb) '
 
     def do_quit(self, arg):
-        """Quit command to exit the program\n"""
-        return True
-    
-    def close(self):
+        """Quit command to exit the program\n """
         return True
 
     def do_EOF(self, arg):
-        """EOF command to exit the program"""
-        self.close()
+        """ EOF is added """
         print()
-        quit()
+        return True
 
     def emptyline(self):
+        """empty line if no command is given"""
         pass
 
 if __name__ == '__main__':
