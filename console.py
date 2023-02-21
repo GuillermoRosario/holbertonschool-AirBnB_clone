@@ -3,7 +3,6 @@
 Command Interpreter
 """
 
-
 import cmd
 
 class HBNBCommand(cmd.Cmd):
@@ -13,8 +12,9 @@ class HBNBCommand(cmd.Cmd):
     def do_quit(self, arg):
         'Quit command to exit the program\n'
         return True
-
+    
     def close(self):
+        'Close command'
         return True
 
     def do_EOF(self, arg):
@@ -24,8 +24,8 @@ class HBNBCommand(cmd.Cmd):
         quit()
 
     def emptyline(self):
-        pass
-
+        'Do nothing on empty line'
+    pass
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
