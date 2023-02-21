@@ -3,9 +3,11 @@
 Command Interpreter OFFICIAL
 """
 
+
 import cmd
 
 class HBNBCommand(cmd.Cmd):
+
     """This is my HNBB Class"""
 
     prompt = '(hbnb) '
@@ -15,7 +17,6 @@ class HBNBCommand(cmd.Cmd):
         return True
     
     def close(self):
-        """Close command"""
         return True
 
     def do_EOF(self, arg):
@@ -25,7 +26,6 @@ class HBNBCommand(cmd.Cmd):
         quit()
 
     def emptyline(self):
-        """Do nothing on empty line"""
         pass
 
 if __name__ == '__main__':
