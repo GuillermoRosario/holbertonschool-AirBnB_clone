@@ -25,5 +25,8 @@ def do_EOF(self, arg):
     print()
     quit()
 
+def emptyline(self):
+        pass
+
 if __name__ == '__main__':
     HBNBCommand().cmdloop()   
