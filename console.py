@@ -2,25 +2,26 @@
 """
 Command Interpreter Interface
 """
-
 import cmd
 
 
 class HBNBCommand(cmd.Cmd):
-    """Simple command processor example."""
     prompt = '(hbnb) '
 
     def do_quit(self, arg):
-        """Quit command to exit the program\n """
+        'Quit command to exit the program\n'
+        return True
+
+    def close(self):
         return True
 
     def do_EOF(self, arg):
-        """ EOF is added """
+        'EOF command to exit the program'
+        self.close()
         print()
-        return True
+        quit()
 
     def emptyline(self):
-        """empty line if no command is given"""
         pass
 
 if __name__ == '__main__':
