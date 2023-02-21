@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """
-Command Interpreter OFFICIAL
+Command Interpreter Interface
 """
 
-
 import cmd
+
 
 class HBNBCommand(cmd.Cmd):
 
