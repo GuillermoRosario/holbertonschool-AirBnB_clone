@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Entry point of the command interpreter
+Command Interpreter Entry & Imports
 """
 import cmd
 from models.base_model import BaseModel
