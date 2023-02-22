@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-BaseModel class module
+BaseModel 
+class module
 """
 import uuid
 from datetime import datetime
@@ -9,7 +10,8 @@ import models
 
 class BaseModel:
     """
-    Defines all common attributes/methods
+    Defines all common 
+    attributes/methods
     for other classes
     """
 
