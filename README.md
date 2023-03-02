@@ -1,8 +1,8 @@
 # 0x00. AirBnB clone - The console
 
 ## Description
-In this project we developped a console. A console is an interpreter of commands,
-which the user executes when performing different actions. For example, create a
+In this project we developped a console. A console is an command line interpreter,
+in which the user executes different actions. For example, create a
 user, destroy some location of a home etc. Similar to the Shell proyect previously done. 
 
 The base code is called BaseModel. Which has three attributes that are id, update,
@@ -22,15 +22,26 @@ Through the interpreter and with the correct commands we can execute create, des
 or even show objects.
 
 ### How to start it
+First of all clone this Repository to your local machine, 
+using the following command:
+
+`git@github.com:GuillermoRosario/holbertonschool-AirBnB_clone.git`
+
+Afterwards you can execute the Console using the following command:
 
 `./ console.py `
 
-### How to use it
+### How to use the Console?
 
-Run the console
+After executing it , you can run the following commands...
 
-syntax:
-	(hbbd) command <BaseModel> id
+1. help: displays a list of available commands.
+2. quit: exits the program.
+3. create: creates a new object and saves it to a JSON file.
+4. show: displays the details of an existing object.
+5. destroy: deletes an existing object.
+6. all: displays a list of all existing objects.
+7. update: updates the attributes of an existing object.
 
 ## Example:
 
