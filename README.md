@@ -1,30 +1,65 @@
-# holbertonschool-AirBnB_clone
+# 0x00. AirBnB clone - The console
 
-Holberton School AirBnB Proyect
+## Description
+In this project we developped a console. A console is an interpreter of commands,
+which the user executes when performing different actions. For example, create a
+user, destroy some location of a home etc. Similar to the Shell proyect previously done. 
 
-Description of the project:
+The base code is called BaseModel. Which has three attributes that are id, update,
+time created. All created objects inherit these three attributes. This is convenient 
+when we have to control the objects that we are using.
 
-In this proyect we wrote a a command interpreter to manage our AirBnB objects.
-This is the first step towards building our first full web application: the AirBnB clone. 
-What we build during this project will connect with all other following projects: such as HTML/CSS templating, database storage, API, front-end integration…
+Another very important file is FileSotrage. Essentially what it does is transform 
+the new dictionaries into json files and store them in memory. If at any time we need
+a specific object, this program is in charge of looking for it and returning it.
 
-Steps Taken:
+Last but not least is the console. Commands are executed in this file. For example 
+create, destroy, show etc. For me this file is like the application engine. It is what 
+allows everything to run.
 
-Create a parent class (called BaseModel) to take care of the initialization, serialization and deserialization of your future instance
+## Command Interpreter:
+Through the interpreter and with the correct commands we can execute create, destroy 
+or even show objects.
 
-Create a simple flow of serialization/deserialization: Instance <-> Dictionary <-> JSON string <-> file
+### How to start it
 
-Create all classes used for AirBnB (User, State, City, Place…) that inherit from BaseModel.
+`./ console.py `
 
-Create the first abstracted storage engine of the project: File storage.
+### How to use it
 
-Create all unittests to validate all our classes and storage engine
+Run the console
 
+syntax:
+	(hbbd) command <BaseModel> id
 
-Description of the command interpreter:
+## Example:
 
- How to start it:
+```
+(hbdb) help
 
- How to Use it: 
+Documented commands (type help <topic>):
+========================================
+EOE  all  create  destroy  help  quit  show  update
+```
 
- Examples:
+```
+(hbdb) create BaseModel
+702e8662-8eae-4781-bf8f-a09d06fe1055
+```
+
+```
+(hbdb) create BaseModel
+8779ea41-c044-40d7-a212-8ac48941b2e2
+(hbdb) destroy BaseModel 8779ea41-c044-40d7-a212-8ac48941b2e2
+(hbdb) show BaseModel 8779ea41-c044-40d7-a212-8ac48941b2e2
+** no instance found **
+(hbdb) create BaseModel
+ac8b9ffe-af76-4dee-9812-c90a1d627f30
+(hbdb) show BaseModel ac8b9ffe-af76-4dee-9812-c90a1d627f30
+*[BaseModel](ac8b9ffe-af76-4dee-9812-c90a1d627f30) {'id': 'ac8b9ffe-af76-4dee-9812-c90a1d6
+27f30', 'created_at': datetime.datetime(2022, 7, 4, 23, 23, 53, 537703),
+'update_at': datetime.datetime(2022, 7, 4, 23, 23, 53, 537708)}
+(hbdb) quit
+vagrant@ubuntu-focal:~/holbertonschool-AirBnB_clone$
+```
+![hbnh](https://i.imgur.com/LrSQ55j.png)
