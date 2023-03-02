@@ -25,7 +25,7 @@ or even show objects.
 First of all clone this Repository to your local machine, 
 using the following command:
 
-`git@github.com:GuillermoRosario/holbertonschool-AirBnB_clone.git`
+`git clone - git@github.com:GuillermoRosario/holbertonschool-AirBnB_clone.git`
 
 Afterwards you can execute the Console using the following command:
 
