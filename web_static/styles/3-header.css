@@ -1,0 +1,13 @@
+header 
+{
+background: #FF0000; 
+height: 70px;   
+width: 100%;
+border-bottom: 1px #CCCCCC;
+}
+header object 
+{
+    position: absolute;
+    vertical-align: center;
+    left: 20px;
+}
